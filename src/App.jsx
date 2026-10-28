@@ -20,6 +20,8 @@ const defaultGenreColor = "bg-emerald-100 text-emerald-700 border-emerald-200";
 export default function OngekiRoulette() {
   const [min, setMin] = useState(13.7);
   const [max, setMax] = useState(15.7);
+  const [minInput, setMinInput] = useState("13.7");
+  const [maxInput, setMaxInput] = useState("15.7");
   const [genres, setGenres] = useState([]);
   const [difficulties, setDifficulties] = useState(["EXPERT", "MASTER", "LUNATIC"]);
   const [result, setResult] = useState(null);
@@ -70,9 +72,31 @@ export default function OngekiRoulette() {
     }, 75);
   };
 
+  const commitMin = () => {
+    const value = Number.parseFloat(minInput);
+    const next = Number.isFinite(value)
+      ? Math.min(Math.max(value, 13.7), max)
+      : min;
+    const rounded = Math.round(next * 10) / 10;
+    setMin(rounded);
+    setMinInput(rounded.toFixed(1));
+  };
+
+  const commitMax = () => {
+    const value = Number.parseFloat(maxInput);
+    const next = Number.isFinite(value)
+      ? Math.max(Math.min(value, 15.7), min)
+      : max;
+    const rounded = Math.round(next * 10) / 10;
+    setMax(rounded);
+    setMaxInput(rounded.toFixed(1));
+  };
+
   const reset = () => {
     setMin(13.7);
     setMax(15.7);
+    setMinInput("13.7");
+    setMaxInput("15.7");
     setGenres([]);
     setDifficulties(["EXPERT", "MASTER", "LUNATIC"]);
     setResult(null);
@@ -110,10 +134,10 @@ export default function OngekiRoulette() {
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <label className="text-xs text-slate-500">最小
-                  <input type="number" min="13.7" max="15.7" step="0.1" value={min} onChange={(event) => setMin(Math.min(Number(event.target.value), max))} className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 font-bold outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100" />
+                  <input type="number" inputMode="decimal" min="13.7" max={max} step="0.1" value={minInput} onChange={(event) => setMinInput(event.target.value)} onBlur={commitMin} onKeyDown={(event) => { if (event.key === "Enter") event.currentTarget.blur(); }} className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 font-bold outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100" />
                 </label>
                 <label className="text-xs text-slate-500">最大
-                  <input type="number" min="13.7" max="15.7" step="0.1" value={max} onChange={(event) => setMax(Math.max(Number(event.target.value), min))} className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 font-bold outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100" />
+                  <input type="number" inputMode="decimal" min={min} max="15.7" step="0.1" value={maxInput} onChange={(event) => setMaxInput(event.target.value)} onBlur={commitMax} onKeyDown={(event) => { if (event.key === "Enter") event.currentTarget.blur(); }} className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 font-bold outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100" />
                 </label>
               </div>
             </div>
