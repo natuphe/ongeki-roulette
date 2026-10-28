@@ -1,0 +1,2452 @@
+[
+  {
+    "title": "Recollect Lines",
+    "constant": 15.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15+"
+  },
+  {
+    "title": "μ3",
+    "constant": 15.6,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "girls.exe",
+    "constant": 15.5,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "Apollo",
+    "constant": 15.4,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "FestA of PandemoniuM",
+    "constant": 15.4,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "LAMIA",
+    "constant": 15.4,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "MY GLORY WANTED!!!",
+    "constant": 15.4,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "Selenadia",
+    "constant": 15.4,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "And Revive The Melody",
+    "constant": 15.3,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "DIE IN",
+    "constant": 15.3,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "MarbleBlue.",
+    "constant": 15.3,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "MeteorSnow",
+    "constant": 15.3,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "Sargasso",
+    "constant": 15.3,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "光焔のラテラルアーク",
+    "constant": 15.3,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "I Wanna",
+    "constant": 15.2,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "Lazulis Gambit",
+    "constant": 15.2,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "Regulus",
+    "constant": 15.2,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "Stardust:RAY",
+    "constant": 15.2,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "宿星審判",
+    "constant": 15.2,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "Magical Panic Adventure",
+    "constant": 15.1,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "Op.I《fear-TITΛN-》",
+    "constant": 15.1,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "雪男",
+    "constant": 15.1,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "脳天直撃",
+    "constant": 15.1,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "Opfer",
+    "constant": 15,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "Scythe of Death",
+    "constant": 15,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "Stellar:Dream",
+    "constant": 15,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "怨撃",
+    "constant": 15,
+    "genre": "オンゲキ",
+    "difficulty": "LUNATIC",
+    "level": "15"
+  },
+  {
+    "title": "ω4",
+    "constant": 15,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "15"
+  },
+  {
+    "title": "[HALO]",
+    "constant": 14.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Cult future",
+    "constant": 14.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Diamond Dust",
+    "constant": 14.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Don't Fight The Music",
+    "constant": 14.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "eden",
+    "constant": 14.9,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Falsum Atlantis.",
+    "constant": 14.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "FREEDOM DiVE",
+    "constant": 14.9,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "GAME：CHANGER",
+    "constant": 14.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Good bye, Merry-Go-Round.",
+    "constant": 14.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Good bye, Merry-Go-Round. (Kobaryo's FTN-Remix)",
+    "constant": 14.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Hainuwele",
+    "constant": 14.9,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Invisible Frenzy",
+    "constant": 14.9,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "macrocosmos",
+    "constant": 14.9,
+    "genre": "チュウマイ",
+    "difficulty": "LUNATIC",
+    "level": "14+"
+  },
+  {
+    "title": "Nýx",
+    "constant": 14.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Our Wrenally",
+    "constant": 14.9,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Sage",
+    "constant": 14.9,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Sparking Revolver",
+    "constant": 14.9,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Synthesis.",
+    "constant": 14.9,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "the EmpErroR",
+    "constant": 14.9,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Titania",
+    "constant": 14.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Viyella's Scream",
+    "constant": 14.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "オンソクデイズ!!",
+    "constant": 14.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "淵底のグレイ・ユークロニア",
+    "constant": 14.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "A Man In The Mirror",
+    "constant": 14.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Ai C",
+    "constant": 14.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Crimson Phoenix",
+    "constant": 14.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Flow Into You",
+    "constant": 14.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Fragrance",
+    "constant": 14.8,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "In Chaos",
+    "constant": 14.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "My First Phone",
+    "constant": 14.8,
+    "genre": "チュウマイ",
+    "difficulty": "LUNATIC",
+    "level": "14+"
+  },
+  {
+    "title": "QZKago Requiem",
+    "constant": 14.8,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Re：End of a Dream",
+    "constant": 14.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Shamshir -rough Pt.2-",
+    "constant": 14.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Tempestissimo",
+    "constant": 14.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "TiamaT:F minor",
+    "constant": 14.8,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Viyella's Tears",
+    "constant": 14.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Xingularity",
+    "constant": 14.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "YURUSHITE",
+    "constant": 14.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "しとしとと",
+    "constant": 14.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "ゼーレンヴァンデルング",
+    "constant": 14.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "冥乱幻舞",
+    "constant": 14.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Alea jacta est!",
+    "constant": 14.7,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "AstrøNotes.",
+    "constant": 14.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Buck's Fizz",
+    "constant": 14.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Chronomia",
+    "constant": 14.7,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Elemental Ethnic",
+    "constant": 14.7,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "End Time",
+    "constant": 14.7,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Final Flash Flight",
+    "constant": 14.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "FLUFFY FLASH",
+    "constant": 14.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "larva",
+    "constant": 14.7,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Last Celebration",
+    "constant": 14.7,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Love & Justice",
+    "constant": 14.7,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "MEGALOVANIA",
+    "constant": 14.7,
+    "genre": "VARIETY",
+    "difficulty": "LUNATIC",
+    "level": "14+"
+  },
+  {
+    "title": "otorii INNOVATED -[i]3-",
+    "constant": 14.7,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "ouroboros -twin stroke of the end-",
+    "constant": 14.7,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "Recollect Lines",
+    "constant": 14.7,
+    "genre": "オンゲキ",
+    "difficulty": "EXPERT",
+    "level": "14+"
+  },
+  {
+    "title": "RELOAD",
+    "constant": 14.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "SUPER AMBULANCE",
+    "constant": 14.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "THE TRiANGLE",
+    "constant": 14.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "クリムゾン帝王",
+    "constant": 14.7,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "渦状銀河のシンフォニエッタ",
+    "constant": 14.7,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "最強STRONGER",
+    "constant": 14.7,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "其のエメラルドを見よ",
+    "constant": 14.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14+"
+  },
+  {
+    "title": "BATTLE NO.1",
+    "constant": 14.6,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Caliburne ～Story of the Legendary sword～",
+    "constant": 14.6,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "crazy (about you)",
+    "constant": 14.6,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Crazy Party Rush",
+    "constant": 14.6,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Diamond Dust -crystal piano Arr.-",
+    "constant": 14.6,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Fragrance",
+    "constant": 14.6,
+    "genre": "チュウマイ",
+    "difficulty": "EXPERT",
+    "level": "14"
+  },
+  {
+    "title": "GEOMETRIC DANCE",
+    "constant": 14.6,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "luna blu",
+    "constant": 14.6,
+    "genre": "チュウマイ",
+    "difficulty": "LUNATIC",
+    "level": "14"
+  },
+  {
+    "title": "MEGATON BLAST",
+    "constant": 14.6,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Prominence",
+    "constant": 14.6,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "VIIIbit Explorer",
+    "constant": 14.6,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "World Vanquisher",
+    "constant": 14.6,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "エータ・ベータ・イータ",
+    "constant": 14.6,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "デアエ・エクス・マキナ！",
+    "constant": 14.6,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "ラクガキスト",
+    "constant": 14.6,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "心",
+    "constant": 14.6,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "μάγια",
+    "constant": 14.6,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "#狂った民族2 PRAVARGYAZOOQA",
+    "constant": 14.5,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "8OROCHI",
+    "constant": 14.5,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Aenbharr",
+    "constant": 14.5,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Air",
+    "constant": 14.5,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Akasagarbha -reincarnate-",
+    "constant": 14.5,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "B100d Hunter",
+    "constant": 14.5,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "BREaK! BREaK! BREaK!",
+    "constant": 14.5,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Climax",
+    "constant": 14.5,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Cogito ergo sum",
+    "constant": 14.5,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Earthly Light",
+    "constant": 14.5,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Energizing Flame",
+    "constant": 14.5,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "FLUFFY FLASH (C-Show & Maozon Remix)",
+    "constant": 14.5,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Glorious Crown (tpz over-Over-OVERCUTE REMIX)",
+    "constant": 14.5,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "MAGNETAR GIRL",
+    "constant": 14.5,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Megameteor",
+    "constant": 14.5,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "N3V3R G3T OV3R",
+    "constant": 14.5,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Showguts",
+    "constant": 14.5,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "TEmPTaTiON",
+    "constant": 14.5,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "What color...",
+    "constant": 14.5,
+    "genre": "オンゲキ",
+    "difficulty": "LUNATIC",
+    "level": "14"
+  },
+  {
+    "title": "Zitronectar",
+    "constant": 14.5,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "ハードコア・シンドローム",
+    "constant": 14.5,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "ヒトリボッチサテライト",
+    "constant": 14.5,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "まっすぐ→→→ストリーム！",
+    "constant": 14.5,
+    "genre": "オンゲキ",
+    "difficulty": "LUNATIC",
+    "level": "14"
+  },
+  {
+    "title": "狂恋ROMANCE",
+    "constant": 14.5,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "月詠に鳴る",
+    "constant": 14.5,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "怒槌",
+    "constant": 14.5,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "10pt8ion",
+    "constant": 14.4,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Amphisbaena",
+    "constant": 14.4,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Armageddon",
+    "constant": 14.4,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Baqeela (Creepy Remix)",
+    "constant": 14.4,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Blessed Rain",
+    "constant": 14.4,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Desperado Waltz",
+    "constant": 14.4,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Everything Will Freeze",
+    "constant": 14.4,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "L9",
+    "constant": 14.4,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Starry Colors",
+    "constant": 14.4,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Sulfur",
+    "constant": 14.4,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "TECHNOPOLIS 2085",
+    "constant": 14.4,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Trrricksters!!",
+    "constant": 14.4,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "WE'RE BACK!!",
+    "constant": 14.4,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "ユニゾンモノローグ",
+    "constant": 14.4,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "宛城、炎上！！",
+    "constant": 14.4,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "美夜月鏡",
+    "constant": 14.4,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "霧の書斎",
+    "constant": 14.4,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "雷切-RAIKIRI-",
+    "constant": 14.4,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": ".locusignore",
+    "constant": 14.3,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "2112410403927243233368",
+    "constant": 14.3,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "3分ガール",
+    "constant": 14.3,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "BLUE ZONE",
+    "constant": 14.3,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "DRAGONLADY",
+    "constant": 14.3,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "folern",
+    "constant": 14.3,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Galaxy Blaster",
+    "constant": 14.3,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Garakuta Doll Play",
+    "constant": 14.3,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Ignition",
+    "constant": 14.3,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Jack-the-Ripper◆",
+    "constant": 14.3,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Malicious Mischance",
+    "constant": 14.3,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "MEGALOVANIA",
+    "constant": 14.3,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Stargazing Dreamer",
+    "constant": 14.3,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Starlight★Limited",
+    "constant": 14.3,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Supersonic Generation",
+    "constant": 14.3,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Unwelcome School",
+    "constant": 14.3,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "おしゃまなプリンセス",
+    "constant": 14.3,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "ガジェットはプリンセス",
+    "constant": 14.3,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "ジャンヌ・ダルクの慟哭",
+    "constant": 14.3,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "セガNET麻雀MJ -O.N.G.E.K.I. MIX-",
+    "constant": 14.3,
+    "genre": "VARIETY",
+    "difficulty": "LUNATIC",
+    "level": "14"
+  },
+  {
+    "title": "μ3",
+    "constant": 14.3,
+    "genre": "オンゲキ",
+    "difficulty": "EXPERT",
+    "level": "14"
+  },
+  {
+    "title": "ALLNIGHT_DANCER",
+    "constant": 14.2,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Altale",
+    "constant": 14.2,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "B WiZ U",
+    "constant": 14.2,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Blows Up Everything",
+    "constant": 14.2,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Death Scythe",
+    "constant": 14.2,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Genesis",
+    "constant": 14.2,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Grayed Out-Antifront-",
+    "constant": 14.2,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Imperishable Night 2006 (2016 Refine)",
+    "constant": 14.2,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "PARALLEL★PRISM",
+    "constant": 14.2,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Satori ～3rd EyEs (2020 Recall)",
+    "constant": 14.2,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Sound Chimera",
+    "constant": 14.2,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Tricky Treat!!!",
+    "constant": 14.2,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "U.N.オーエンは彼女なのか？ - Greater Scarlet",
+    "constant": 14.2,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "キライラ",
+    "constant": 14.2,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "音弾超人ゴリライザー",
+    "constant": 14.2,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "初音ミクの激唱",
+    "constant": 14.2,
+    "genre": "niconico",
+    "difficulty": "LUNATIC",
+    "level": "14"
+  },
+  {
+    "title": "初音ミクの激唱",
+    "constant": 14.2,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Azucar",
+    "constant": 14.1,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "BBBLOW -rebuild-",
+    "constant": 14.1,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "c.s.q.n.",
+    "constant": 14.1,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Calamity Fortune",
+    "constant": 14.1,
+    "genre": "東方Project",
+    "difficulty": "LUNATIC",
+    "level": "14"
+  },
+  {
+    "title": "Daredevil Glaive",
+    "constant": 14.1,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Elusive Emotes",
+    "constant": 14.1,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "felys -final remix-",
+    "constant": 14.1,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "FREEDOM DiVE (tpz Overcute Remix)",
+    "constant": 14.1,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Knight Rider",
+    "constant": 14.1,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "LiftOff",
+    "constant": 14.1,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "OBLIVION",
+    "constant": 14.1,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Oshama Scramble! (Cranky Remix)",
+    "constant": 14.1,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "SILENT BLUE",
+    "constant": 14.1,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "YURUSHITE (LeaF Remix)",
+    "constant": 14.1,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "カナリア",
+    "constant": 14.1,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "ヒアソビ",
+    "constant": 14.1,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "レータイスパークEx",
+    "constant": 14.1,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "神々が恋した幻想郷",
+    "constant": 14.1,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "7thSense",
+    "constant": 14,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "8-EM",
+    "constant": 14,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Break Over",
+    "constant": 14,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "ENERGY SYNERGY MATRIX",
+    "constant": 14,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "FestA of PandemoniuM",
+    "constant": 14,
+    "genre": "オンゲキ",
+    "difficulty": "EXPERT",
+    "level": "14"
+  },
+  {
+    "title": "Fly to the Leaden Sky -O.N.G.E.K.I. MIX-",
+    "constant": 14,
+    "genre": "VARIETY",
+    "difficulty": "LUNATIC",
+    "level": "14"
+  },
+  {
+    "title": "GODLINESS",
+    "constant": 14,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "GOODRAGE",
+    "constant": 14,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "ICEBURN",
+    "constant": 14,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "INTERNET YAMERO",
+    "constant": 14,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Livmetarryr",
+    "constant": 14,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "MY GLORY WANTED!!!",
+    "constant": 14,
+    "genre": "オンゲキ",
+    "difficulty": "EXPERT",
+    "level": "14"
+  },
+  {
+    "title": "Princesses Holiday",
+    "constant": 14,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "R'N'R Monsta",
+    "constant": 14,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "きゅうくらりん",
+    "constant": 14,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "シャッキーーン！！",
+    "constant": 14,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "ジングルベル",
+    "constant": 14,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "ナイト・オブ・ナイツ (xi Remix)",
+    "constant": 14,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "宣誓センセーション",
+    "constant": 14,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "14"
+  },
+  {
+    "title": "Ai Drew",
+    "constant": 13.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Ai Nov",
+    "constant": 13.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "BABYLON",
+    "constant": 13.9,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Baqeela",
+    "constant": 13.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "C & B",
+    "constant": 13.9,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "conflict",
+    "constant": 13.9,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Cyaegha",
+    "constant": 13.9,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "DEEPNESS（ReC Ver.）",
+    "constant": 13.9,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Electric Emotion",
+    "constant": 13.9,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "L'épilogue",
+    "constant": 13.9,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Last Kingdom",
+    "constant": 13.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Lazulis Gambit",
+    "constant": 13.9,
+    "genre": "オンゲキ",
+    "difficulty": "EXPERT",
+    "level": "13+"
+  },
+  {
+    "title": "Lethal Dose",
+    "constant": 13.9,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "LUNA DIAL -Version X-SAKUYA-",
+    "constant": 13.9,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Mini skirt",
+    "constant": 13.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Ruler Count, Zero",
+    "constant": 13.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Sargasso",
+    "constant": 13.9,
+    "genre": "オンゲキ",
+    "difficulty": "EXPERT",
+    "level": "13+"
+  },
+  {
+    "title": "Selenadia",
+    "constant": 13.9,
+    "genre": "オンゲキ",
+    "difficulty": "EXPERT",
+    "level": "13+"
+  },
+  {
+    "title": "Seventeen Feels",
+    "constant": 13.9,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "snooze",
+    "constant": 13.9,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Suspiro",
+    "constant": 13.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Vibes 2k20",
+    "constant": 13.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "YO-KAI Disco",
+    "constant": 13.9,
+    "genre": "VARIETY",
+    "difficulty": "LUNATIC",
+    "level": "13+"
+  },
+  {
+    "title": "アマツカミ",
+    "constant": 13.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "エピトゥリカの祀",
+    "constant": 13.9,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "サンダーレスキュー！",
+    "constant": 13.9,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "ジングルベル",
+    "constant": 13.9,
+    "genre": "POPS＆ANIME",
+    "difficulty": "LUNATIC",
+    "level": "13+"
+  },
+  {
+    "title": "つっぱれ！にゃんきー魂",
+    "constant": 13.9,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "ナイト・オブ・ナイツ",
+    "constant": 13.9,
+    "genre": "東方Project",
+    "difficulty": "LUNATIC",
+    "level": "13+"
+  },
+  {
+    "title": "パラジクロロベンゼン",
+    "constant": 13.9,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "ほんの感想",
+    "constant": 13.9,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "まりもとおもちゃ箱",
+    "constant": 13.9,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "遺伝子レベル∞スパイラル",
+    "constant": 13.9,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "四月の雨",
+    "constant": 13.9,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "初音天地開闢神話",
+    "constant": 13.9,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "人マニア",
+    "constant": 13.9,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "閃鋼のブリューナク",
+    "constant": 13.9,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "断罪は遍く人間の元に",
+    "constant": 13.9,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "A Day in the Patisserie",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Ai Me",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "And Revive The Melody",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "EXPERT",
+    "level": "13+"
+  },
+  {
+    "title": "Apollo -onoken AxSwing Remix-",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Bad Apple!! feat.nomico (Camellia’s “Bad Psy” Remix)",
+    "constant": 13.8,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "CHOCOLATE BOMB!!!!",
+    "constant": 13.8,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "CO5M1C R4ILR0AD",
+    "constant": 13.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Dement ～after legend～",
+    "constant": 13.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Dreadnought",
+    "constant": 13.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Duello",
+    "constant": 13.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Imitation:Loud Lounge",
+    "constant": 13.8,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "LAMIA",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "EXPERT",
+    "level": "13+"
+  },
+  {
+    "title": "MEGATON BLAST (tpz Overcute Remix)",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Memories of O.N.G.E.K.I.",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Mizutama-Tripster",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Pastel Sprinkles",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Perfect Shining!!",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "LUNATIC",
+    "level": "13+"
+  },
+  {
+    "title": "Reach for the Stars",
+    "constant": 13.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Scythe of Death",
+    "constant": 13.8,
+    "genre": "チュウマイ",
+    "difficulty": "EXPERT",
+    "level": "13+"
+  },
+  {
+    "title": "Secret Sleuth",
+    "constant": 13.8,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Small Cloud Sugar Candy",
+    "constant": 13.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Sparkle",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Stardust:RAY",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "EXPERT",
+    "level": "13+"
+  },
+  {
+    "title": "STARLIGHT TWILIGHT -GC edit-",
+    "constant": 13.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Summer is over",
+    "constant": 13.8,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "SWEET SHAKE!!",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "LUNATIC",
+    "level": "13+"
+  },
+  {
+    "title": "U ARE",
+    "constant": 13.8,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "UTOPIA CRASH",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Vibes 2k20 (owl＊aging remix)",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "YO-KAI Disco",
+    "constant": 13.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "アイドゥーミー！",
+    "constant": 13.8,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "いちげき！のテーマ",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "オートファジー",
+    "constant": 13.8,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "カミサマネジマキ",
+    "constant": 13.8,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "ギガンティックO.T.N",
+    "constant": 13.8,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "ゲーミングポーラーベア",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "サイハテ",
+    "constant": 13.8,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "ニニ",
+    "constant": 13.8,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "みんな Happy!!",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "LUNATIC",
+    "level": "13+"
+  },
+  {
+    "title": "ロッキンピンクモンスター (豚乙女ランコVo Ver.)",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "最っ高のエンタメだ!!",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "卑怯戦隊うろたんだー",
+    "constant": 13.8,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "夢を叶える場所",
+    "constant": 13.8,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "撥条少女時計",
+    "constant": 13.8,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "AMAZING MIGHTYYYY!!!!",
+    "constant": 13.7,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Apollo",
+    "constant": 13.7,
+    "genre": "オンゲキ",
+    "difficulty": "EXPERT",
+    "level": "13+"
+  },
+  {
+    "title": "Calamity Fortune",
+    "constant": 13.7,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Destr0yer",
+    "constant": 13.7,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Doll Judgment",
+    "constant": 13.7,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Faith in Expression",
+    "constant": 13.7,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "get the regret over",
+    "constant": 13.7,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Got more raves? -xiRemix-",
+    "constant": 13.7,
+    "genre": "VARIETY",
+    "difficulty": "EXPERT",
+    "level": "13+"
+  },
+  {
+    "title": "Honey Bear",
+    "constant": 13.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "HONEY-Q",
+    "constant": 13.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "I got a gig tonight!",
+    "constant": 13.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "I want You",
+    "constant": 13.7,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Lazy Addiction",
+    "constant": 13.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Löschen",
+    "constant": 13.7,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Lostwizz",
+    "constant": 13.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "On your mark (104期 Ver.)",
+    "constant": 13.7,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Oshama Scramble!",
+    "constant": 13.7,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Quon",
+    "constant": 13.7,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "RED to RED",
+    "constant": 13.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Regulus",
+    "constant": 13.7,
+    "genre": "チュウマイ",
+    "difficulty": "EXPERT",
+    "level": "13"
+  },
+  {
+    "title": "ROAD TO DREAM",
+    "constant": 13.7,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Sakura Fubuki",
+    "constant": 13.7,
+    "genre": "VARIETY",
+    "difficulty": "LUNATIC",
+    "level": "13+"
+  },
+  {
+    "title": "So much loving you★ -DIVA Edit-",
+    "constant": 13.7,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Stellar:Dream",
+    "constant": 13.7,
+    "genre": "オンゲキ",
+    "difficulty": "EXPERT",
+    "level": "13+"
+  },
+  {
+    "title": "The wheel to the right",
+    "constant": 13.7,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Touch and Go",
+    "constant": 13.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "アンバークロニクル",
+    "constant": 13.7,
+    "genre": "チュウマイ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "ウサテイ",
+    "constant": 13.7,
+    "genre": "東方Project",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "オーバーライド",
+    "constant": 13.7,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "クイーンオブハート",
+    "constant": 13.7,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "スキが止まらない！",
+    "constant": 13.7,
+    "genre": "オンゲキ",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "ド屑",
+    "constant": 13.7,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "ぶいちゅっばの歌",
+    "constant": 13.7,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "孤独の果て",
+    "constant": 13.7,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "初音ミクの消失",
+    "constant": 13.7,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "風仁雷仁",
+    "constant": 13.7,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "僕たちの旅とエピローグ。",
+    "constant": 13.7,
+    "genre": "VARIETY",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "夜咄ディセイブ",
+    "constant": 13.7,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "藍の華",
+    "constant": 13.7,
+    "genre": "POPS＆ANIME",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "裏表ラバーズ",
+    "constant": 13.7,
+    "genre": "niconico",
+    "difficulty": "MASTER",
+    "level": "13+"
+  },
+  {
+    "title": "Λzure Vixen",
+    "constant": 13.7,
+    "genre": "チュウマイ",
+    "difficulty": "EXPERT",
+    "level": "13+"
+  }
+]
