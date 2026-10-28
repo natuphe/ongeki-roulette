@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Dices, RotateCcw, SlidersHorizontal, Music2, History, Sparkles, X } from "lucide-react";
+import { Dices, RotateCcw, SlidersHorizontal, Music2, History, Sparkles, X, ExternalLink } from "lucide-react";
 import SONGS from "./data/songs.json";
 
 const GENRES = [...new Set(SONGS.map((song) => song.genre))].sort((a, b) =>
@@ -195,6 +195,23 @@ export default function OngekiRoulette() {
                       <span className="rounded-full bg-white/10 px-3 py-1.5 text-xs font-bold">Lv. {result.level}</span>
                       <span className="rounded-full bg-white/10 px-3 py-1.5 text-xs font-bold">{result.difficulty}</span>
                       <span className="rounded-full bg-white/10 px-3 py-1.5 text-xs font-bold">{result.genre}</span>
+                    </div>
+                    <div className="mt-6">
+                      {result.chartUrl ? (
+                        <a
+                          href={result.chartUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/30 bg-cyan-400/15 px-4 py-3 text-sm font-black text-cyan-200 transition hover:bg-cyan-400/25"
+                        >
+                          <ExternalLink size={17} />
+                          譜面画像を開く
+                        </a>
+                      ) : (
+                        <p className="text-xs font-bold text-slate-500">
+                          この譜面の画像リンクは未登録です
+                        </p>
+                      )}
                     </div>
                   </motion.div>
                 ) : (
