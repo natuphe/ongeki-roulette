@@ -2,9 +2,8 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const DATA_URL =
-  "https://raw.githubusercontent.com/zvuc/otoge-db/main/ongeki/data/music-ex.json";
-const SDVX_BASE_URL = "https://sdvx.in/ongeki/";
+const ARCHIVE_JSON = "https://sdvx.in/ongeki/_/json/";
+const VIEWER_URL = "https://sdvx.in/ongeki/_/viewer.php";
 const TIMEOUT_MS = 30000;
 
 const currentFile = fileURLToPath(import.meta.url);
@@ -13,11 +12,11 @@ const projectDirectory = path.resolve(scriptsDirectory, "..");
 const songsFile = path.join(projectDirectory, "src", "data", "songs.json");
 const unmatchedFile = path.join(projectDirectory, "chart-links-unmatched.txt");
 
-const chartLinkKeys = {
-  ADVANCED: "lev_adv_chart_link",
-  EXPERT: "lev_exc_chart_link",
-  MASTER: "lev_mas_chart_link",
-  LUNATIC: "lev_lnt_chart_link",
+const difficultyParam = {
+  ADVANCED: "adv",
+  EXPERT: "exp",
+  MASTER: "mst",
+  LUNATIC: "rem",
 };
 
 function normalize(value) {
@@ -32,117 +31,120 @@ function normalize(value) {
     .toLowerCase();
 }
 
-function findTitle(record) {
-  const keys = [
-    "title",
-    "name",
-    "musicName",
-    "music_name",
-    "songName",
-    "song_name",
-  ];
-
-  for (const key of keys) {
-    if (typeof record?.[key] === "string" && record[key].trim()) {
-      return record[key].trim();
-    }
-  }
-
-  return null;
+function chartAvailable(level) {
+  const value = String(level ?? "").trim();
+  if (!value || value === "_" || value === "0" || value === "-") return false;
+  return !value.includes("_");
 }
 
-function makeChartUrl(relativePath) {
-  const value = String(relativePath ?? "").trim();
-  if (!value) return null;
-
-  if (/^https?:\/\//i.test(value)) {
-    return value.replace(/^http:/i, "https:");
-  }
-
-  const withoutLeadingSlash = value.replace(/^\/+/, "");
-  const withExtension = /\.htm(?:$|[?#])/i.test(withoutLeadingSlash)
-    ? withoutLeadingSlash
-    : `${withoutLeadingSlash}.htm`;
-
-  return new URL(withExtension, SDVX_BASE_URL).href;
+function viewerUrl(id, diff) {
+  const params = new URLSearchParams({
+    id: String(id),
+    diff,
+  });
+  return `${VIEWER_URL}?${params.toString()}`;
 }
 
-async function fetchDatabase() {
+function legacyId(url) {
+  const match = String(url ?? "").match(/(\d{5})(?:bsc|adv|exp|mst|rem|luna\d*)?\.htm/i);
+  return match ? match[1] : null;
+}
+
+async function fetchJson(url) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
-
   try {
-    console.log(`取得中: ${DATA_URL}`);
-    const response = await fetch(DATA_URL, {
+    const response = await fetch(url, {
       signal: controller.signal,
-      headers: { "User-Agent": "OngekiRoulette/4.0" },
+      headers: { "User-Agent": "OngekiRoulette/5.0" },
     });
-
-    if (!response.ok) {
-      throw new Error(`データ取得失敗: HTTP ${response.status}`);
-    }
-
+    if (!response.ok) return null;
     const text = await response.text();
-    console.log(`取得完了: ${(text.length / 1024 / 1024).toFixed(1)} MB`);
-    return JSON.parse(text);
+    const trimmed = text.trim();
+    if (!trimmed.startsWith("[") && !trimmed.startsWith("{")) return null;
+    return JSON.parse(trimmed);
+  } catch {
+    return null;
   } finally {
     clearTimeout(timer);
   }
 }
 
-function buildLinkMap(database) {
-  if (!Array.isArray(database)) {
-    throw new Error("OTOGE DBのデータ形式が配列ではありません");
+async function fetchArchive() {
+  const names = [];
+  for (let index = 1; index <= 20; index += 1) {
+    names.push(`songs${String(index).padStart(2, "0")}.json`);
+  }
+  names.push("songs_del.json");
+
+  const songs = [];
+  for (const name of names) {
+    const url = `${ARCHIVE_JSON}${name}`;
+    console.log(`取得中: ${url}`);
+    const data = await fetchJson(url);
+    if (!Array.isArray(data)) {
+      console.log("  スキップ");
+      continue;
+    }
+    console.log(`  ${data.length}曲`);
+    songs.push(...data);
+  }
+  return songs;
+}
+
+function buildLinkMap(archive, rouletteSongs) {
+  const byTitle = new Map();
+  const byId = new Map();
+
+  for (const song of archive) {
+    if (!song?.id || !song.title) continue;
+    byId.set(String(song.id), song);
+    const key = normalize(song.title);
+    if (!byTitle.has(key)) byTitle.set(key, []);
+    byTitle.get(key).push(song);
   }
 
   const linkMap = new Map();
-  let recordsWithLinks = 0;
 
-  for (const record of database) {
-    const title = findTitle(record);
-    if (!title) continue;
+  for (const song of rouletteSongs) {
+    const difficulty = String(song.difficulty).toUpperCase();
+    const diff = difficultyParam[difficulty];
+    if (!diff) continue;
 
-    let hasLink = false;
+    const candidates = [];
+    const id = legacyId(song.chartUrl);
+    if (id && byId.has(id)) candidates.push(byId.get(id));
+    candidates.push(...(byTitle.get(normalize(song.title)) ?? []));
 
-    for (const [difficulty, key] of Object.entries(chartLinkKeys)) {
-      const chartUrl = makeChartUrl(record[key]);
-      if (!chartUrl) continue;
+    const match = candidates.find((item) => chartAvailable(item.levels?.[diff]));
+    if (!match) continue;
 
-      linkMap.set(`${normalize(title)}::${difficulty}`, chartUrl);
-      hasLink = true;
-    }
-
-    if (hasLink) recordsWithLinks += 1;
+    linkMap.set(`${normalize(song.title)}::${difficulty}`, viewerUrl(match.id, diff));
   }
 
-  return { linkMap, recordsWithLinks };
+  return { linkMap, archiveCount: byId.size };
 }
 
 async function main() {
-  console.log("1/4 OTOGE DBデータを取得します");
-  const database = await fetchDatabase();
+  console.log("1/4 譜面保管所の楽曲一覧を取得します");
+  const archive = await fetchArchive();
 
-  console.log("2/4 chart_link項目からURLを作成します");
-  const { linkMap, recordsWithLinks } = buildLinkMap(database);
-  console.log(
-    `全楽曲: ${database.length}件 / リンク保有曲: ${recordsWithLinks}件 / 譜面リンク: ${linkMap.size}件`
-  );
-
-  console.log("3/4 ルーレットの譜面と照合します");
+  console.log("2/4 ルーレットの譜面を読みます");
   const songs = JSON.parse(await readFile(songsFile, "utf8"));
+
+  console.log("3/4 現在のビューアURLを割り当てます");
+  const { linkMap, archiveCount } = buildLinkMap(archive, songs);
+  console.log(`保管所: ${archiveCount}曲 / 割り当て: ${linkMap.size}譜面`);
+
   let matched = 0;
   const unmatched = [];
-
   const updated = songs.map((song) => {
     const difficulty = String(song.difficulty).toUpperCase();
-    const key = `${normalize(song.title)}::${difficulty}`;
-    const chartUrl = linkMap.get(key);
-
+    const chartUrl = linkMap.get(`${normalize(song.title)}::${difficulty}`);
     if (chartUrl) {
       matched += 1;
       return { ...song, chartUrl };
     }
-
     const { chartUrl: _oldChartUrl, ...withoutLink } = song;
     unmatched.push(`${song.title} [${difficulty}]`);
     return withoutLink;
@@ -153,18 +155,16 @@ async function main() {
   await writeFile(unmatchedFile, `${unmatched.join("\n")}\n`, "utf8");
 
   const rate = songs.length ? (matched / songs.length) * 100 : 0;
-
   console.log("");
   console.log(`登録完了: ${matched}/${songs.length}譜面 (${rate.toFixed(1)}%)`);
   console.log(`未登録: ${unmatched.length}譜面`);
-  console.log(`未登録一覧: ${unmatchedFile}`);
 
   const checks = [
     ["Recollect Lines", "MASTER"],
-    ["天狗の落とし文 feat. ytr", "MASTER"],
-    ["天狗の落とし文 feat. ytr", "LUNATIC"],
+    ["Recollect Lines", "ADVANCED"],
+    ["Perfect Shining!!", "LUNATIC"],
+    ["FestA of PandemoniuM", "MASTER"],
   ];
-
   console.log("");
   console.log("代表リンク確認:");
   for (const [title, difficulty] of checks) {
@@ -173,8 +173,7 @@ async function main() {
   }
 
   if (rate < 70) {
-    console.warn("");
-    console.warn("注意: 登録率が70%未満です。GitHubへ反映する前に確認してください。");
+    console.warn("注意: 登録率が70%未満です。");
     process.exitCode = 2;
   }
 }
