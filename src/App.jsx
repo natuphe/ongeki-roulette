@@ -256,10 +256,22 @@ export default function OngekiRoulette() {
                 role="switch"
                 aria-checked={excludeHistory}
                 onClick={() => setExcludeHistory(!excludeHistory)}
-                className={`relative h-7 w-12 shrink-0 rounded-full ${excludeHistory ? "bg-zinc-900 dark:bg-zinc-100" : "bg-zinc-300 dark:bg-zinc-600"}`}
+                className="relative h-7 w-12 shrink-0 rounded-full"
+                style={{
+                  backgroundColor: excludeHistory
+                    ? theme === "dark"
+                      ? "#e4e4e7"
+                      : "#18181b"
+                    : theme === "dark"
+                      ? "#52525b"
+                      : "#d4d4d8",
+                }}
               >
                 <span
-                  className={`absolute top-1 left-1 h-5 w-5 rounded-full bg-white shadow-sm ${excludeHistory ? "translate-x-5" : "translate-x-0"}`}
+                  className={`absolute top-1 left-1 h-5 w-5 rounded-full shadow-sm ${excludeHistory ? "translate-x-5" : "translate-x-0"}`}
+                  style={{
+                    backgroundColor: theme === "dark" && excludeHistory ? "#18181b" : "#ffffff",
+                  }}
                 />
               </button>
             </div>
