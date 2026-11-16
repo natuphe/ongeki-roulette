@@ -3,6 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Dices, RotateCcw, SlidersHorizontal, Music2, History, Sparkles, X, ExternalLink } from "lucide-react";
 import SONGS from "./data/songs.json";
 
+const MIN_CONSTANT = 12.0;
+const MAX_CONSTANT = 15.7;
+
 const GENRES = [...new Set(SONGS.map((song) => song.genre))].sort((a, b) =>
   a.localeCompare(b, "ja")
 );
@@ -18,10 +21,10 @@ const genreColors = {
 const defaultGenreColor = "bg-emerald-100 text-emerald-700 border-emerald-200";
 
 export default function OngekiRoulette() {
-  const [min, setMin] = useState(13.7);
-  const [max, setMax] = useState(15.7);
-  const [minInput, setMinInput] = useState("13.7");
-  const [maxInput, setMaxInput] = useState("15.7");
+  const [min, setMin] = useState(MIN_CONSTANT);
+  const [max, setMax] = useState(MAX_CONSTANT);
+  const [minInput, setMinInput] = useState(MIN_CONSTANT.toFixed(1));
+  const [maxInput, setMaxInput] = useState(MAX_CONSTANT.toFixed(1));
   const [genres, setGenres] = useState([]);
   const [difficulties, setDifficulties] = useState(["EXPERT", "MASTER", "LUNATIC"]);
   const [result, setResult] = useState(null);
@@ -75,7 +78,7 @@ export default function OngekiRoulette() {
   const commitMin = () => {
     const value = Number.parseFloat(minInput);
     const next = Number.isFinite(value)
-      ? Math.min(Math.max(value, 13.7), max)
+      ? Math.min(Math.max(value, MIN_CONSTANT), max)
       : min;
     const rounded = Math.round(next * 10) / 10;
     setMin(rounded);
@@ -85,7 +88,7 @@ export default function OngekiRoulette() {
   const commitMax = () => {
     const value = Number.parseFloat(maxInput);
     const next = Number.isFinite(value)
-      ? Math.max(Math.min(value, 15.7), min)
+      ? Math.max(Math.min(value, MAX_CONSTANT), min)
       : max;
     const rounded = Math.round(next * 10) / 10;
     setMax(rounded);
@@ -93,10 +96,10 @@ export default function OngekiRoulette() {
   };
 
   const reset = () => {
-    setMin(13.7);
-    setMax(15.7);
-    setMinInput("13.7");
-    setMaxInput("15.7");
+    setMin(MIN_CONSTANT);
+    setMax(MAX_CONSTANT);
+    setMinInput(MIN_CONSTANT.toFixed(1));
+    setMaxInput(MAX_CONSTANT.toFixed(1));
     setGenres([]);
     setDifficulties(["EXPERT", "MASTER", "LUNATIC"]);
     setResult(null);
@@ -134,10 +137,10 @@ export default function OngekiRoulette() {
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <label className="text-xs text-slate-500">最小
-                  <input type="number" inputMode="decimal" min="13.7" max={max} step="0.1" value={minInput} onChange={(event) => setMinInput(event.target.value)} onBlur={commitMin} onKeyDown={(event) => { if (event.key === "Enter") event.currentTarget.blur(); }} className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 font-bold outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100" />
+                  <input type="number" inputMode="decimal" min={MIN_CONSTANT} max={max} step="0.1" value={minInput} onChange={(event) => setMinInput(event.target.value)} onBlur={commitMin} onKeyDown={(event) => { if (event.key === "Enter") event.currentTarget.blur(); }} className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 font-bold outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100" />
                 </label>
                 <label className="text-xs text-slate-500">最大
-                  <input type="number" inputMode="decimal" min={min} max="15.7" step="0.1" value={maxInput} onChange={(event) => setMaxInput(event.target.value)} onBlur={commitMax} onKeyDown={(event) => { if (event.key === "Enter") event.currentTarget.blur(); }} className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 font-bold outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100" />
+                  <input type="number" inputMode="decimal" min={min} max={MAX_CONSTANT} step="0.1" value={maxInput} onChange={(event) => setMaxInput(event.target.value)} onBlur={commitMax} onKeyDown={(event) => { if (event.key === "Enter") event.currentTarget.blur(); }} className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 font-bold outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100" />
                 </label>
               </div>
             </div>
@@ -248,7 +251,7 @@ export default function OngekiRoulette() {
         )}
 
         <footer className="mt-8 text-center text-xs leading-5 text-slate-400">
-          譜面定数13.7以上を収録 · 全{SONGS.length}譜面
+          譜面定数{MIN_CONSTANT.toFixed(1)}以上を収録 · 全{SONGS.length}譜面
           <br />
           譜面定数は非公式情報を含み、更新時に変わる場合があります。
         </footer>
