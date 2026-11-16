@@ -9,7 +9,25 @@ const MAX_CONSTANT = 15.7;
 const GENRES = [...new Set(SONGS.map((song) => song.genre))].sort((a, b) =>
   a.localeCompare(b, "ja")
 );
-const DIFFICULTIES = ["EXPERT", "MASTER", "LUNATIC"];
+const DIFFICULTIES = ["ADVANCED", "EXPERT", "MASTER", "LUNATIC"];
+const difficultyStyle = {
+  ADVANCED: {
+    selected: "border-amber-400 bg-amber-400 text-slate-900 shadow-md shadow-amber-200",
+    badge: "bg-amber-400 text-slate-900 shadow-amber-200",
+  },
+  EXPERT: {
+    selected: "border-red-500 bg-red-500 text-white shadow-md shadow-red-200",
+    badge: "bg-red-500 text-white shadow-red-200",
+  },
+  MASTER: {
+    selected: "border-pink-500 bg-pink-500 text-white shadow-md shadow-pink-200",
+    badge: "bg-pink-500 text-white shadow-pink-200",
+  },
+  LUNATIC: {
+    selected: "border-purple-500 bg-purple-500 text-white shadow-md shadow-purple-200",
+    badge: "bg-purple-500 text-white shadow-purple-200",
+  },
+};
 const genreColors = {
   オンゲキ: "bg-pink-100 text-pink-700 border-pink-200",
   "POPS＆ANIME": "bg-sky-100 text-sky-700 border-sky-200",
@@ -26,7 +44,7 @@ export default function OngekiRoulette() {
   const [minInput, setMinInput] = useState(MIN_CONSTANT.toFixed(1));
   const [maxInput, setMaxInput] = useState(MAX_CONSTANT.toFixed(1));
   const [genres, setGenres] = useState([]);
-  const [difficulties, setDifficulties] = useState(["EXPERT", "MASTER", "LUNATIC"]);
+  const [difficulties, setDifficulties] = useState(DIFFICULTIES);
   const [result, setResult] = useState(null);
   const [history, setHistory] = useState([]);
   const [rolling, setRolling] = useState(false);
@@ -69,7 +87,7 @@ export default function OngekiRoulette() {
         clearInterval(timer);
         const picked = eligible[Math.floor(Math.random() * eligible.length)];
         setResult(picked);
-        setHistory((current) => [picked, ...current].slice(0, 8));
+        setHistory((current) => [picked, ...current]);
         setRolling(false);
       }
     }, 75);
@@ -101,7 +119,7 @@ export default function OngekiRoulette() {
     setMinInput(MIN_CONSTANT.toFixed(1));
     setMaxInput(MAX_CONSTANT.toFixed(1));
     setGenres([]);
-    setDifficulties(["EXPERT", "MASTER", "LUNATIC"]);
+    setDifficulties(DIFFICULTIES);
     setResult(null);
     setHistory([]);
   };
@@ -161,9 +179,9 @@ export default function OngekiRoulette() {
 
             <div className="mb-7">
               <label className="mb-3 block text-sm font-bold">難易度</label>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
                 {DIFFICULTIES.map((difficulty) => (
-                  <button key={difficulty} onClick={() => toggle(difficulty, difficulties, setDifficulties)} className={`rounded-xl border px-2 py-3 text-xs font-black transition ${difficulties.includes(difficulty) ? difficulty === "LUNATIC" ? "border-purple-500 bg-purple-500 text-white shadow-md shadow-purple-200" : difficulty === "MASTER" ? "border-pink-500 bg-pink-500 text-white shadow-md shadow-pink-200" : "border-red-500 bg-red-500 text-white" : "border-slate-200 bg-slate-50 text-slate-400"}`}>
+                  <button key={difficulty} onClick={() => toggle(difficulty, difficulties, setDifficulties)} className={`rounded-xl border px-2 py-3 text-xs font-black transition ${difficulties.includes(difficulty) ? difficultyStyle[difficulty].selected : "border-slate-200 bg-slate-50 text-slate-400"}`}>
                     {difficulty}
                   </button>
                 ))}
@@ -173,7 +191,7 @@ export default function OngekiRoulette() {
             <div className="flex items-center justify-between rounded-2xl bg-slate-50 p-4">
               <div>
                 <p className="text-sm font-bold">履歴の曲を除外</p>
-                <p className="mt-0.5 text-xs text-slate-400">同じ譜面が連続しません</p>
+                <p className="mt-0.5 text-xs text-slate-400">履歴をクリアするまで出ません</p>
               </div>
               <button type="button" aria-pressed={excludeHistory} onClick={() => setExcludeHistory(!excludeHistory)} className={`relative h-7 w-12 rounded-full transition ${excludeHistory ? "bg-violet-500" : "bg-slate-300"}`}>
                 <span className={`absolute top-1 h-5 w-5 rounded-full bg-white shadow transition ${excludeHistory ? "left-6" : "left-1"}`} />
@@ -191,7 +209,7 @@ export default function OngekiRoulette() {
               <AnimatePresence mode="wait">
                 {result ? (
                   <motion.div key={`${result.title}-${result.difficulty}-${rolling}`} initial={{ opacity: 0, y: 14, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.18 }} className="w-full">
-                    <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-cyan-400 via-violet-500 to-pink-500 text-4xl font-black shadow-lg shadow-violet-500/30">{result.constant.toFixed(1)}</div>
+                    <div className={`mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-3xl text-4xl font-black shadow-lg ${difficultyStyle[result.difficulty]?.badge ?? "bg-white text-slate-900"}`}>{result.constant.toFixed(1)}</div>
                     <p className="mb-2 text-xs font-black tracking-[.25em] text-cyan-400">{rolling ? "SELECTING..." : "NEXT SONG"}</p>
                     <h2 className="mx-auto max-w-lg text-3xl font-black leading-tight sm:text-4xl">{result.title}</h2>
                     <div className="mt-5 flex flex-wrap justify-center gap-2">
@@ -208,11 +226,11 @@ export default function OngekiRoulette() {
                           className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/30 bg-cyan-400/15 px-4 py-3 text-sm font-black text-cyan-200 transition hover:bg-cyan-400/25"
                         >
                           <ExternalLink size={17} />
-                          譜面画像を開く
+                          譜面保管所を開く
                         </a>
                       ) : (
                         <p className="text-xs font-bold text-slate-500">
-                          この譜面の画像リンクは未登録です
+                          この譜面の保管所リンクは未登録です
                         </p>
                       )}
                     </div>
@@ -239,10 +257,10 @@ export default function OngekiRoulette() {
               <div className="flex items-center gap-2"><History size={19} className="text-cyan-500" /><h2 className="font-black">抽選履歴</h2></div>
               <button onClick={() => setHistory([])} className="flex items-center gap-1 text-xs font-bold text-slate-400 hover:text-slate-700"><X size={14} /> クリア</button>
             </div>
-            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid max-h-96 gap-2 overflow-y-auto sm:grid-cols-2 lg:grid-cols-4">
               {history.map((song, index) => (
                 <div key={`${song.title}-${song.difficulty}-${index}`} className="flex items-center gap-3 rounded-2xl bg-slate-50 p-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-900 font-mono text-xs font-black text-white">{song.constant.toFixed(1)}</span>
+                  <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl font-mono text-xs font-black shadow-sm ${difficultyStyle[song.difficulty]?.badge ?? "bg-slate-900 text-white"}`}>{song.constant.toFixed(1)}</span>
                   <div className="min-w-0"><p className="truncate text-sm font-bold">{song.title}</p><p className="text-[11px] text-slate-400">{song.difficulty} · {song.genre}</p></div>
                 </div>
               ))}
