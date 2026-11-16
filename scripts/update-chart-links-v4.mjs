@@ -14,6 +14,7 @@ const songsFile = path.join(projectDirectory, "src", "data", "songs.json");
 const unmatchedFile = path.join(projectDirectory, "chart-links-unmatched.txt");
 
 const chartLinkKeys = {
+  ADVANCED: ["lev_adv_chart_link", "lev_adv_i"],
   EXPERT: ["lev_exc_chart_link", "lev_exc_i"],
   MASTER: ["lev_mas_chart_link", "lev_mas_i"],
   LUNATIC: ["lev_lnt_chart_link", "lev_lnt_i"],
@@ -70,25 +71,18 @@ function makeChartUrl(relativePath) {
   return new URL(withExtension, SDVX_BASE_URL).href;
 }
 
-// The old .htm pages no longer render: their common.js redirect returns HTML.
-// The chart picture itself is the sibling obj/data{id}.png file.
 function alignChartUrl(chartUrl, difficulty) {
   if (!chartUrl) return null;
   if (difficulty === "MASTER" && /exp\.htm(?:$|[?#])/i.test(chartUrl)) {
-    chartUrl = chartUrl.replace(/exp\.htm/i, "mst.htm");
-  } else if (difficulty === "EXPERT" && /mst\.htm(?:$|[?#])/i.test(chartUrl)) {
-    chartUrl = chartUrl.replace(/mst\.htm/i, "exp.htm");
+    return chartUrl.replace(/exp\.htm/i, "mst.htm");
   }
-
-  try {
-    const url = new URL(chartUrl);
-    const match = url.pathname.match(/^(.*\/)([^/]+)\.htm$/i);
-    if (!match) return chartUrl;
-    url.pathname = `${match[1]}obj/data${match[2]}.png`;
-    return url.href;
-  } catch {
-    return chartUrl;
+  if (difficulty === "EXPERT" && /mst\.htm(?:$|[?#])/i.test(chartUrl)) {
+    return chartUrl.replace(/mst\.htm/i, "exp.htm");
   }
+  if (difficulty === "ADVANCED" && /(?:exp|mst)\.htm(?:$|[?#])/i.test(chartUrl)) {
+    return chartUrl.replace(/(?:exp|mst)\.htm/i, "adv.htm");
+  }
+  return chartUrl;
 }
 
 async function fetchDatabase() {

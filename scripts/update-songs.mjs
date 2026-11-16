@@ -30,6 +30,7 @@ const DIFFICULTIES = {
 };
 
 const CHARTS = {
+  ADVANCED: ["lev_adv", "lev_adv_i"],
   EXPERT: ["lev_exc", "lev_exc_i"],
   MASTER: ["lev_mas", "lev_mas_i"],
   LUNATIC: ["lev_lnt", "lev_lnt_i"],
@@ -67,6 +68,10 @@ function songKey(song) {
   return `${normalize(song.title)}::${song.difficulty}`;
 }
 
+function isSoloVersion(title) {
+  return /ソロ\s*ver|solo\s*ver/i.test(title);
+}
+
 function wikiUrl(title) {
   return `https://wikiwiki.jp/gameongeki/${encodeURIComponent(title)}`;
 }
@@ -89,6 +94,7 @@ function makeSong(title, constant, difficulty, genre, level) {
   const cleanedTitle = cleanText(title);
   if (
     !cleanedTitle ||
+    isSoloVersion(cleanedTitle) ||
     !difficulty ||
     !Number.isFinite(constant) ||
     constant < MIN_CONSTANT
@@ -156,8 +162,9 @@ function parseConstantPage(html) {
         }
 
         if (cells.length === 5 && cells[0] === "ADV" && GENRES[cells[1]]) {
-          difficulty = null;
+          difficulty = "ADVANCED";
           genre = GENRES[cells[1]];
+          songs.push(makeSong(cells[2], constant, difficulty, genre));
           return;
         }
 
@@ -260,15 +267,20 @@ async function supplementNewSongs(songs, database) {
 
   if (pending.size === 0) return;
 
-  console.log(`定数表に無い新曲ページを確認します: ${pending.size}曲`);
-  for (const [pageTitle, expected] of pending) {
-    const response = await fetch(wikiUrl(pageTitle), {
-      headers: { "User-Agent": "Mozilla/5.0 OngekiRoulette/1.0" },
-    });
-    if (!response.ok) {
-      console.warn(`  ページなし: ${pageTitle}`);
-      continue;
-    }
+    console.log(`定数表に無い新曲ページを確認します: ${pending.size}曲`);
+    for (const [pageTitle, expected] of pending) {
+      let response;
+      for (let attempt = 0; attempt < 4; attempt += 1) {
+        response = await fetch(wikiUrl(pageTitle), {
+          headers: { "User-Agent": "Mozilla/5.0 OngekiRoulette/1.0" },
+        });
+        if (response.status !== 429 && response.status !== 503) break;
+        await new Promise((resolve) => setTimeout(resolve, 1000 * (attempt + 1)));
+      }
+      if (!response?.ok) {
+        console.warn(`  ページなし: ${pageTitle} (${response?.status ?? "no response"})`);
+        continue;
+      }
 
     const parsed = parseSongPage(await response.text());
     const byDifficulty = new Map(parsed.map((song) => [song.difficulty, song]));
@@ -296,7 +308,7 @@ async function supplementNewSongs(songs, database) {
 
 async function main() {
   console.log("譜面データを取得しています...");
-  console.log(`対象: 譜面定数 ${MIN_CONSTANT.toFixed(1)} 以上の EXPERT / MASTER / LUNATIC`);
+  console.log(`対象: 譜面定数 ${MIN_CONSTANT.toFixed(1)} 以上の ADVANCED / EXPERT / MASTER / LUNATIC`);
 
   const songs = [];
   for (const title of WIKI_PAGES) {
@@ -350,6 +362,14 @@ async function main() {
     if (!song || (constant !== null && song.constant !== constant)) {
       throw new Error(`${title} [${difficulty}] の定数を確認できませんでした。`);
     }
+  }
+
+  if (uniqueSongs.some((song) => isSoloVersion(song.title))) {
+    throw new Error("ソロバージョンが残っています。");
+  }
+
+  if (!uniqueSongs.some((song) => song.difficulty === "ADVANCED")) {
+    throw new Error("ADVANCED譜面を取得できませんでした。");
   }
 
   if (uniqueSongs.length < 800) {
