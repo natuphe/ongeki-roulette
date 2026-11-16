@@ -14,10 +14,10 @@ const songsFile = path.join(projectDirectory, "src", "data", "songs.json");
 const unmatchedFile = path.join(projectDirectory, "chart-links-unmatched.txt");
 
 const chartLinkKeys = {
-  ADVANCED: ["lev_adv_chart_link", "lev_adv_i"],
-  EXPERT: ["lev_exc_chart_link", "lev_exc_i"],
-  MASTER: ["lev_mas_chart_link", "lev_mas_i"],
-  LUNATIC: ["lev_lnt_chart_link", "lev_lnt_i"],
+  ADVANCED: "lev_adv_chart_link",
+  EXPERT: "lev_exc_chart_link",
+  MASTER: "lev_mas_chart_link",
+  LUNATIC: "lev_lnt_chart_link",
 };
 
 function normalize(value) {
@@ -59,30 +59,12 @@ function makeChartUrl(relativePath) {
     return value.replace(/^http:/i, "https:");
   }
 
-  let withoutLeadingSlash = value.replace(/^\/+/, "");
-  const parts = withoutLeadingSlash.split("/");
-  if (parts.length > 2 && /^\d{2}$/.test(parts.at(-2)) && /\d/.test(parts.at(-1))) {
-    withoutLeadingSlash = parts.slice(-2).join("/");
-  }
+  const withoutLeadingSlash = value.replace(/^\/+/, "");
   const withExtension = /\.htm(?:$|[?#])/i.test(withoutLeadingSlash)
     ? withoutLeadingSlash
     : `${withoutLeadingSlash}.htm`;
 
   return new URL(withExtension, SDVX_BASE_URL).href;
-}
-
-function alignChartUrl(chartUrl, difficulty) {
-  if (!chartUrl) return null;
-  if (difficulty === "MASTER" && /exp\.htm(?:$|[?#])/i.test(chartUrl)) {
-    return chartUrl.replace(/exp\.htm/i, "mst.htm");
-  }
-  if (difficulty === "EXPERT" && /mst\.htm(?:$|[?#])/i.test(chartUrl)) {
-    return chartUrl.replace(/mst\.htm/i, "exp.htm");
-  }
-  if (difficulty === "ADVANCED" && /(?:exp|mst)\.htm(?:$|[?#])/i.test(chartUrl)) {
-    return chartUrl.replace(/(?:exp|mst)\.htm/i, "adv.htm");
-  }
-  return chartUrl;
 }
 
 async function fetchDatabase() {
@@ -122,15 +104,11 @@ function buildLinkMap(database) {
 
     let hasLink = false;
 
-    for (const [difficulty, [linkKey, constantKey]] of Object.entries(chartLinkKeys)) {
-      const chartUrl = alignChartUrl(makeChartUrl(record[linkKey]), difficulty);
+    for (const [difficulty, key] of Object.entries(chartLinkKeys)) {
+      const chartUrl = makeChartUrl(record[key]);
       if (!chartUrl) continue;
 
-      const mapKey = `${normalize(title)}::${difficulty}`;
-      const hasConstant = String(record[constantKey] ?? "").trim() !== "";
-      if (!hasConstant && linkMap.has(mapKey)) continue;
-
-      linkMap.set(mapKey, chartUrl);
+      linkMap.set(`${normalize(title)}::${difficulty}`, chartUrl);
       hasLink = true;
     }
 
