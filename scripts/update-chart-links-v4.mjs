@@ -19,6 +19,14 @@ const difficultyParam = {
   LUNATIC: "rem",
 };
 
+const archiveFiles = [
+  ...Array.from({ length: 20 }, (_, index) => `songs${String(index + 1).padStart(2, "0")}.json`),
+  "songs_del.json",
+  "songs_update.json",
+];
+
+const lunaticFiles = ["songs_luna.json", "songs_lunadel.json"];
+
 function normalize(value) {
   return String(value ?? "")
     .normalize("NFKC")
@@ -31,9 +39,10 @@ function normalize(value) {
     .toLowerCase();
 }
 
-function chartAvailable(level) {
+function levelClickable(level, { allowZero = false } = {}) {
   const value = String(level ?? "").trim();
-  if (!value || value === "_" || value === "0" || value === "-") return false;
+  if (!value || value === "_" || value === "-") return false;
+  if (!allowZero && (value === "0" || value.replace(/^_+/, "") === "0")) return false;
   return !value.includes("_");
 }
 
@@ -45,9 +54,24 @@ function viewerUrl(id, diff) {
   return `${VIEWER_URL}?${params.toString()}`;
 }
 
-function legacyId(url) {
-  const match = String(url ?? "").match(/(\d{5})(?:bsc|adv|exp|mst|rem|luna\d*)?\.htm/i);
-  return match ? match[1] : null;
+function existingId(url) {
+  const viewer = String(url ?? "").match(/[?&]id=([^&]+)/i);
+  if (viewer) return decodeURIComponent(viewer[1]);
+  const legacy = String(url ?? "").match(/(\d{5})(?:bsc|adv|exp|mst|rem|luna\d*)?\.htm/i);
+  return legacy ? legacy[1] : null;
+}
+
+function artistHint(title) {
+  const parts = String(title ?? "").split(/\s+-\s+/);
+  if (parts.length < 2) return "";
+  return normalize(parts.slice(1).join("-"));
+}
+
+function artistMatches(song, hint) {
+  if (!hint) return false;
+  const artist = normalize(song.artist);
+  if (!artist) return false;
+  return artist === hint || artist.startsWith(hint) || hint.startsWith(artist);
 }
 
 async function fetchJson(url) {
@@ -70,13 +94,7 @@ async function fetchJson(url) {
   }
 }
 
-async function fetchArchive() {
-  const names = [];
-  for (let index = 1; index <= 20; index += 1) {
-    names.push(`songs${String(index).padStart(2, "0")}.json`);
-  }
-  names.push("songs_del.json");
-
+async function fetchSongFiles(names) {
   const songs = [];
   for (const name of names) {
     const url = `${ARCHIVE_JSON}${name}`;
@@ -92,11 +110,11 @@ async function fetchArchive() {
   return songs;
 }
 
-function buildLinkMap(archive, rouletteSongs) {
+function indexSongs(songs) {
   const byTitle = new Map();
   const byId = new Map();
 
-  for (const song of archive) {
+  for (const song of songs) {
     if (!song?.id || !song.title) continue;
     byId.set(String(song.id), song);
     const key = normalize(song.title);
@@ -104,6 +122,52 @@ function buildLinkMap(archive, rouletteSongs) {
     byTitle.get(key).push(song);
   }
 
+  return { byTitle, byId };
+}
+
+function candidatesFor(index, song) {
+  const found = [];
+  const seen = new Set();
+  const add = (item) => {
+    if (!item || seen.has(item)) return;
+    seen.add(item);
+    found.push(item);
+  };
+
+  const id = existingId(song.chartUrl);
+  if (id) add(index.byId.get(id));
+  for (const item of index.byTitle.get(normalize(song.title)) ?? []) add(item);
+
+  const baseTitle = String(song.title ?? "").split(/\s+-\s+/)[0];
+  if (normalize(baseTitle) !== normalize(song.title)) {
+    for (const item of index.byTitle.get(normalize(baseTitle)) ?? []) add(item);
+  }
+
+  return found;
+}
+
+function chooseChart(index, song, diff, { allowZero = false } = {}) {
+  const available = candidatesFor(index, song).filter((item) =>
+    levelClickable(item.levels?.[diff], { allowZero }),
+  );
+  if (available.length === 0) return null;
+  if (available.length === 1) return available[0];
+
+  const hinted = available.filter((item) => artistMatches(item, artistHint(song.title)));
+  if (hinted.length === 1) return hinted[0];
+
+  const id = existingId(song.chartUrl);
+  if (id) {
+    const same = available.find((item) => String(item.id) === id);
+    if (same) return same;
+  }
+
+  return null;
+}
+
+function buildLinkMap(archive, lunaticSongs, rouletteSongs) {
+  const regular = indexSongs(archive);
+  const lunatic = indexSongs(lunaticSongs);
   const linkMap = new Map();
 
   for (const song of rouletteSongs) {
@@ -111,30 +175,33 @@ function buildLinkMap(archive, rouletteSongs) {
     const diff = difficultyParam[difficulty];
     if (!diff) continue;
 
-    const candidates = [];
-    const id = legacyId(song.chartUrl);
-    if (id && byId.has(id)) candidates.push(byId.get(id));
-    candidates.push(...(byTitle.get(normalize(song.title)) ?? []));
+    if (difficulty === "LUNATIC") {
+      const lunaChart = chooseChart(lunatic, song, "luna", { allowZero: true });
+      if (lunaChart) {
+        linkMap.set(`${normalize(song.title)}::${difficulty}`, viewerUrl(lunaChart.id, "luna"));
+        continue;
+      }
+    }
 
-    const match = candidates.find((item) => chartAvailable(item.levels?.[diff]));
-    if (!match) continue;
-
-    linkMap.set(`${normalize(song.title)}::${difficulty}`, viewerUrl(match.id, diff));
+    const chart = chooseChart(regular, song, diff);
+    if (!chart) continue;
+    linkMap.set(`${normalize(song.title)}::${difficulty}`, viewerUrl(chart.id, diff));
   }
 
-  return { linkMap, archiveCount: byId.size };
+  return { linkMap, archiveCount: regular.byId.size, lunaticCount: lunatic.byId.size };
 }
 
 async function main() {
   console.log("1/4 譜面保管所の楽曲一覧を取得します");
-  const archive = await fetchArchive();
+  const archive = await fetchSongFiles(archiveFiles);
+  const lunaticSongs = await fetchSongFiles(lunaticFiles);
 
   console.log("2/4 ルーレットの譜面を読みます");
   const songs = JSON.parse(await readFile(songsFile, "utf8"));
 
   console.log("3/4 現在のビューアURLを割り当てます");
-  const { linkMap, archiveCount } = buildLinkMap(archive, songs);
-  console.log(`保管所: ${archiveCount}曲 / 割り当て: ${linkMap.size}譜面`);
+  const { linkMap, archiveCount, lunaticCount } = buildLinkMap(archive, lunaticSongs, songs);
+  console.log(`保管所: ${archiveCount}曲 / LUNATIC一覧: ${lunaticCount}曲 / 割り当て: ${linkMap.size}譜面`);
 
   let matched = 0;
   const unmatched = [];
@@ -164,6 +231,13 @@ async function main() {
     ["Recollect Lines", "ADVANCED"],
     ["Perfect Shining!!", "LUNATIC"],
     ["FestA of PandemoniuM", "MASTER"],
+    ["MEGALOVANIA", "LUNATIC"],
+    ["天狗の落とし文 feat. ｙｔｒ", "LUNATIC"],
+    ["Singularity - technoplanet", "MASTER"],
+    ["Singularity - technoplanet", "EXPERT"],
+    ["Singularity - ETIA.", "MASTER"],
+    ["Singularity - SEGA SOUNDSTAFF「セガNET麻雀 MJ」", "MASTER"],
+    ["Grievous Lady", "EXPERT"],
   ];
   console.log("");
   console.log("代表リンク確認:");
