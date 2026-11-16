@@ -292,7 +292,8 @@
     "constant": 15,
     "genre": "オンゲキ",
     "difficulty": "LUNATIC",
-    "level": "15"
+    "level": "15",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=034&diff=luna"
   },
   {
     "title": "蜘蛛の糸",
@@ -459,7 +460,8 @@
     "constant": 14.9,
     "genre": "チュウマイ",
     "difficulty": "LUNATIC",
-    "level": "14+"
+    "level": "14+",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=022&diff=luna"
   },
   {
     "title": "Nýx",
@@ -642,7 +644,8 @@
     "constant": 14.8,
     "genre": "チュウマイ",
     "difficulty": "LUNATIC",
-    "level": "14+"
+    "level": "14+",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=014&diff=luna"
   },
   {
     "title": "QZKago Requiem",
@@ -673,7 +676,8 @@
     "constant": 14.8,
     "genre": "オンゲキ",
     "difficulty": "MASTER",
-    "level": "14+"
+    "level": "14+",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=02164&diff=mst"
   },
   {
     "title": "Tempestissimo",
@@ -752,7 +756,8 @@
     "constant": 14.8,
     "genre": "東方Project",
     "difficulty": "LUNATIC",
-    "level": "14+"
+    "level": "14+",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=043&diff=luna"
   },
   {
     "title": "冥乱幻舞",
@@ -855,7 +860,8 @@
     "constant": 14.7,
     "genre": "VARIETY",
     "difficulty": "LUNATIC",
-    "level": "14+"
+    "level": "14+",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=044&diff=luna"
   },
   {
     "title": "otorii INNOVATED -[i]3-",
@@ -1022,7 +1028,8 @@
     "constant": 14.6,
     "genre": "チュウマイ",
     "difficulty": "LUNATIC",
-    "level": "14"
+    "level": "14",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=013&diff=luna"
   },
   {
     "title": "MEGATON BLAST",
@@ -1773,7 +1780,8 @@
     "constant": 14.3,
     "genre": "VARIETY",
     "difficulty": "MASTER",
-    "level": "14"
+    "level": "14",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=03050&diff=mst"
   },
   {
     "title": "Stargazing Dreamer",
@@ -1860,7 +1868,8 @@
     "constant": 14.3,
     "genre": "VARIETY",
     "difficulty": "LUNATIC",
-    "level": "14"
+    "level": "14",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=021&diff=luna"
   },
   {
     "title": "レイル・ロマネスクハチロクver.",
@@ -2131,14 +2140,16 @@
     "constant": 14.2,
     "genre": "東方Project",
     "difficulty": "LUNATIC",
-    "level": "14"
+    "level": "14",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=024&diff=luna"
   },
   {
     "title": "初音ミクの激唱",
     "constant": 14.2,
     "genre": "niconico",
     "difficulty": "LUNATIC",
-    "level": "14"
+    "level": "14",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=001&diff=luna"
   },
   {
     "title": "初音ミクの激唱",
@@ -2209,7 +2220,8 @@
     "constant": 14.1,
     "genre": "東方Project",
     "difficulty": "LUNATIC",
-    "level": "14"
+    "level": "14",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=007&diff=luna"
   },
   {
     "title": "Daredevil Glaive",
@@ -2320,7 +2332,8 @@
     "constant": 14.1,
     "genre": "VARIETY",
     "difficulty": "MASTER",
-    "level": "14"
+    "level": "14",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=03107&diff=mst"
   },
   {
     "title": "TAIKAN GAME",
@@ -2495,7 +2508,8 @@
     "constant": 14,
     "genre": "VARIETY",
     "difficulty": "LUNATIC",
-    "level": "14"
+    "level": "14",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=019&diff=luna"
   },
   {
     "title": "Glitch Street",
@@ -2638,7 +2652,8 @@
     "constant": 14,
     "genre": "POPS＆ANIME",
     "difficulty": "LUNATIC",
-    "level": "14"
+    "level": "14",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=051&diff=luna"
   },
   {
     "title": "宣誓センセーション",
@@ -2925,7 +2940,8 @@
     "constant": 13.9,
     "genre": "VARIETY",
     "difficulty": "LUNATIC",
-    "level": "13+"
+    "level": "13+",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=029&diff=luna"
   },
   {
     "title": "アイドゥーミー！",
@@ -2972,7 +2988,8 @@
     "constant": 13.9,
     "genre": "POPS＆ANIME",
     "difficulty": "LUNATIC",
-    "level": "13+"
+    "level": "13+",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=010&diff=luna"
   },
   {
     "title": "スカーレット警察のゲットーパトロール24時",
@@ -2995,7 +3012,8 @@
     "constant": 13.9,
     "genre": "東方Project",
     "difficulty": "LUNATIC",
-    "level": "13+"
+    "level": "13+",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=003&diff=luna"
   },
   {
     "title": "パラジクロロベンゼン",
@@ -3299,7 +3317,7 @@
     "genre": "オンゲキ",
     "difficulty": "LUNATIC",
     "level": "13+",
-    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=01038&diff=rem"
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=038&diff=luna"
   },
   {
     "title": "Reach for the Stars",
@@ -3730,7 +3748,8 @@
     "constant": 13.7,
     "genre": "VARIETY",
     "difficulty": "LUNATIC",
-    "level": "13+"
+    "level": "13+",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=005&diff=luna"
   },
   {
     "title": "So much loving you★-DIVA Edit-",
@@ -3769,7 +3788,8 @@
     "constant": 13.7,
     "genre": "VARIETY",
     "difficulty": "LUNATIC",
-    "level": "13+"
+    "level": "13+",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=027&diff=luna"
   },
   {
     "title": "Touch and Go",
@@ -4208,7 +4228,8 @@
     "constant": 13.6,
     "genre": "オンゲキ",
     "difficulty": "EXPERT",
-    "level": "13"
+    "level": "13",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=02164&diff=exp"
   },
   {
     "title": "STAR",
@@ -5567,7 +5588,8 @@
     "constant": 13.2,
     "genre": "niconico",
     "difficulty": "LUNATIC",
-    "level": "13"
+    "level": "13",
+    "chartUrl": "https://sdvx.in/ongeki/_/viewer.php?id=009&diff=luna"
   },
   {
     "title": "カラッポ・ノンフィクション",
