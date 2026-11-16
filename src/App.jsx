@@ -218,10 +218,7 @@ export default function OngekiRoulette() {
             </div>
 
             <div className="mb-5">
-              <div className="mb-2 flex items-center justify-between">
-                <label className="text-sm font-bold">ジャンル</label>
-                <span className="text-xs text-zinc-500">未選択ならすべて</span>
-              </div>
+              <label className="mb-2 block text-sm font-bold">ジャンル</label>
               <div className="flex flex-wrap gap-2">
                 {GENRES.map((genre) => (
                   <button
@@ -253,18 +250,16 @@ export default function OngekiRoulette() {
             </div>
 
             <div className="flex items-center justify-between border border-zinc-200 px-3 py-3 dark:border-zinc-800">
-              <div>
-                <p className="text-sm font-bold">履歴の曲を除外</p>
-                <p className="mt-0.5 text-xs text-zinc-500">履歴をクリアするまで出ません</p>
-              </div>
+              <p className="text-sm font-bold">履歴の曲を除外</p>
               <button
                 type="button"
-                aria-pressed={excludeHistory}
+                role="switch"
+                aria-checked={excludeHistory}
                 onClick={() => setExcludeHistory(!excludeHistory)}
-                className={`relative h-6 w-11 border border-zinc-400 ${excludeHistory ? "bg-zinc-900 dark:bg-zinc-100" : "bg-zinc-200 dark:bg-zinc-700"}`}
+                className={`relative h-7 w-12 shrink-0 rounded-full ${excludeHistory ? "bg-zinc-900 dark:bg-zinc-100" : "bg-zinc-300 dark:bg-zinc-600"}`}
               >
                 <span
-                  className={`absolute top-0.5 h-4 w-4 bg-white dark:bg-zinc-900 ${excludeHistory ? "left-6" : "left-0.5"}`}
+                  className={`absolute top-1 left-1 h-5 w-5 rounded-full bg-white shadow-sm ${excludeHistory ? "translate-x-5" : "translate-x-0"}`}
                 />
               </button>
             </div>
